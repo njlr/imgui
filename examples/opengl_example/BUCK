@@ -1,0 +1,14 @@
+cxx_binary(
+  name = 'opengl_example',
+  header_namespace = '',
+  headers = subdir_glob([
+    ('', '*.h'),
+  ]),
+  srcs = glob([
+    '*.cpp',
+  ]),
+  deps = [
+    '//:imgui',
+    'glfw//:glfw',
+  ],
+)
